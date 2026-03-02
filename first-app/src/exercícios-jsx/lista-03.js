@@ -1,13 +1,42 @@
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 
 export default function Lista03() {
+    const frutas = ["Maçã", "Banana", "Laranja", "Uva"];
+
+    const produtos = [
+    { id: 1, nome: "Camiseta", preco: 49.90 },
+    { id: 2, nome: "Calça", preco: 89.90 },
+    { id: 3, nome: "Tênis", preco: 199.90 },
+    ];
+
+    const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const numerosPares = numeros.filter(numero => numero % 2 === 0);
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.titulo}>Lista 03 - Maria Eduarda Quidiquimo Barreto</Text>
 
       <View style={styles.card}>
-        <Text style={styles.label}>Exercício 1 - View com Text</Text>
-        {/* TODO: sua resposta aqui */}
+        <Text style={styles.label}>Exercício 1 - Lista de Frutas</Text>
+        {frutas.map((fruta, index)=> (
+                    <Text key={index}>
+                        {index + 1} - {fruta}
+                    </Text>
+                ))}
+      </View>
+      {/* -------------------------------------------------------------------------------- */}
+      <View style={styles.card}>
+        <Text style={styles.label}>Exercício 2 - Lista de Produtos</Text>
+        {produtos.map((produto) => (
+                <Text key={produto.id}>
+                    {produto.nome} - {produto.preco}
+                </Text>
+            ))}
+      </View>
+      {/* ---------------------------------------------------------------------------------- */}
+      <View style={styles.card}>
+        <Text style={styles.label}>Exercício 3 - Filtrar Números Pares</Text>
+        <Text>Números pares: {numerosPares} </Text>
       </View>
     </ScrollView>
   );
