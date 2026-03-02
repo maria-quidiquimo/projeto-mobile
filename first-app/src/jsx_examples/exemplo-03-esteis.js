@@ -14,7 +14,7 @@ export default function Exemplo03() {
         <View style={styles.exemplo}>
         <Text style={styles.titulo}> Condicionais </Text>
         <Text style={styles.subtitulo}>Ternário</Text>
-        <Text style={styles.exemplo}> Satus: {logado ? "Logado" : "Deslogado"} </Text>
+        <Text style={styles.exemplo}> Status: {logado ? "Logado" : "Deslogado"} </Text>
         </View>
 
         <View style={styles.exemplo}> 
@@ -22,6 +22,7 @@ export default function Exemplo03() {
             <Text >Notificações: </Text>
             { temNotificacoes && <Text> Você tem novas notificações </Text>}
             { !temNotificacoes && <Text> Você não tem novas notificações </Text>}
+            {/* ponto de ! significa negação, ou seja não tem notificação */}
 
         </View>
 

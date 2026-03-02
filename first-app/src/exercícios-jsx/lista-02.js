@@ -1,13 +1,40 @@
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 
 export default function Lista02() {
+    const loja_aberta = true;
+    const tem_promocao = true;
+    const nota = 7.5;
+
+    function media(nota){
+        if(nota >= 7){
+        return <Text style={{color: "green"}}>Aprovado!</Text>
+        }else if(nota >= 5 && nota < 7){
+        return <Text style={{color: "orange"}}>Recuperação.</Text>
+        }else if(nota < 5){
+        return <Text style={{color: "red"}}>Reprovado!</Text>
+        }
+    }
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.titulo}>Lista 02 - Maria Eduarda Quidiquimo Barreto</Text>
 
       <View style={styles.card}>
-        <Text style={styles.label}>Exercício 1 - View com Text</Text>
-        {/* TODO: sua resposta aqui */}
+        <Text style={styles.label}>Exercício 1 - Operador Ternário</Text>
+        <Text style={styles.exemplo}> Status: {loja_aberta ? "Aberta" : "Fechada"}</Text>
+      </View>
+      {/* ---------------------------------------------------------------------------------- */}
+      <View style={styles.card}>
+        <Text style={styles.label}>Exercício 2 - Operador &&</Text>
+        <Text>Promoções: </Text>
+        { tem_promocao && <Text>Promoção ativa! Aproveite os descontos.</Text>}
+        {!tem_promocao && <Text> </Text>}
+      </View>
+      {/* -------------------------------------------------------------------------------- */}
+      <View style={styles.card}>
+        <Text style={styles.label}>Exercício 3 - Condicional com Múltiplas Condições</Text>
+        <Text> Aluno: </Text>
+        {media(nota)}
       </View>
     </ScrollView>
   );
@@ -41,4 +68,7 @@ const styles = StyleSheet.create({
     paddingBottom: 8,
   },
   texto: { fontSize: 14, color: "#424242", lineHeight: 22 },
+  aprovado: {color: "#11ff00"},
+  recuperacao: {color:"#ff9500"},
+  reprovado: {color: "#ff0000"}
 });
