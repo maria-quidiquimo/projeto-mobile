@@ -7,7 +7,7 @@ import { View, Text, StyleSheet } from "react-native";
 export default function Exemplo01() {
   return (
     <View style={styles.container}> 
-      <Text style={styles.titulo}> Etrutura Padrão</Text>
+      <Text style={styles.titulo}> Estrutura Padrão</Text>
       <Text style={styles.subtitulo}>Padrão com</Text>
       <Text style={styles.exemplo}>Olá SENAI</Text>
     </View>
@@ -15,7 +15,7 @@ export default function Exemplo01() {
 }
 //para acessar, chamamos o styles.componentes styles é o objeto e para acesar seu componente colocamos o.
 //só tem 1 view retornando
-//nromalmente não utilizamos o fragment, mas sim a view pq ela é estilizável e tals
+//normalmente não utilizamos o fragment, mas sim a view pq ela é estilizável e tals
 
 // as configurações do estilo dos compomentes é feito aqui fora
 
