@@ -4,10 +4,12 @@ import Exemplo04 from './jsx_examples/exemplo-04-listas';
 import Lista01 from './exercícios-jsx/lista-01';
 import Lista02 from './exercícios-jsx/lista-02';
 import Lista03 from './exercícios-jsx/lista-03';
+import ViewScaffold from './basic_components/view_example';
+import ViewScaffold2 from './basic_components/view_example02';
 
 export default function App() {
   return (
-    <Lista03 />
+    <ViewScaffold2 />
   );
 }
 
