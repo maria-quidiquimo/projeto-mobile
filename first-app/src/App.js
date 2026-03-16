@@ -10,10 +10,11 @@ import ExercicioView01 from './exercícios-view/exercicio1';
 import ExercicioView02 from './exercícios-view/exercicio2';
 import ExercicioView03 from './exercícios-view/exercicio3';
 import ExercicioView04 from './exercícios-view/exercicio4';
+import ExercicioView05 from './exercícios-view/exercicio5';
 
 export default function App() {
   return (
-    <ExercicioView04/>
+    <ExercicioView05/>
   );
 }
 
