@@ -14,10 +14,11 @@ import ExercicioView05 from './exercícios-view/exercicio5';
 import ExercicioView06 from './exercícios-view/exercicio6';
 import ExercicioView07 from './exercícios-view/exercicio7';
 import ExercicioView08 from './exercícios-view/exercicio8';
+import ExercicioView09 from './exercícios-view/exercicio9';
 
 export default function App() {
   return (
-    <ExercicioView08/>
+    <ExercicioView09/>
   );
 }
 
