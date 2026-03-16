@@ -5,12 +5,12 @@ export default function ViewScaffold2() {
         <View style={styles.container}>
             <Text style={styles.titulo}>Flex</Text>
             <View style={styles.exemplo}>
-                <View style={{ flexDirection: "row", height: 60, width: "100%", gap: 8 }}>
+                <View style={{ flexDirection: "column", height: 80, width: "100%", gap: 8 }}>
                     <View style={[styles.box, { flex: 1 }]}>
                         <Text style={[styles.textBox]}>1</Text>
                     </View>
-                    <View style={[styles.box, { flex: 3  }]}>
-                        <Text style={[styles.textBox]}>2</Text>
+                    <View style={[styles.box, { flex: 1  }]}>
+                        <Text style={[styles.textBox]}>1</Text>
                     </View>
                     <View style={[styles.box, { flex: 1 }]}>
                         <Text style={[styles.textBox]}>1</Text>

@@ -6,10 +6,12 @@ import Lista02 from './exercícios-jsx/lista-02';
 import Lista03 from './exercícios-jsx/lista-03';
 import ViewScaffold from './basic_components/view_example';
 import ViewScaffold2 from './basic_components/view_example02';
+import ExercicioView01 from './exercícios-view/exercicio1';
+import ExercicioView02 from './exercícios-view/exercicio2';
 
 export default function App() {
   return (
-    <ViewScaffold2 />
+    <ExercicioView02 />
   );
 }
 
