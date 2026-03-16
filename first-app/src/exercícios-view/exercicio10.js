@@ -42,25 +42,28 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   header: {
-   backgroundColor: 'green'
+   backgroundColor: 'green',
   },
   cards: {
     
   },
   card1: {
-    
+    backgroundColor: 'red',
   },
   card2: {
-
+    backgroundColor: 'blue'
   },
   card3: {
-
+    backgroundColor: 'yellow'
   },
   linha: {
 
   },
   main: {
-
+    backgroundColor: 'pink'
+  },
+  lateral: {
+    backgroundColor: 'gray'
   },
   footer: {
     backgroundColor: 'blue'
