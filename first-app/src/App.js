@@ -8,10 +8,11 @@ import ViewScaffold from './basic_components/view_example';
 import ViewScaffold2 from './basic_components/view_example02';
 import ExercicioView01 from './exercícios-view/exercicio1';
 import ExercicioView02 from './exercícios-view/exercicio2';
+import ExercicioView03 from './exercícios-view/exercicio3';
 
 export default function App() {
   return (
-    <ExercicioView02 />
+    <ExercicioView03 />
   );
 }
 
