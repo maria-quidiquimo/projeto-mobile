@@ -9,7 +9,7 @@ export default function ViewScaffold2() {
                     <View style={[styles.box, { flex: 1 }]}>
                         <Text style={[styles.textBox]}>1</Text>
                     </View>
-                    <View style={[styles.box, { flex: 2  }]}>
+                    <View style={[styles.box, { flex: 3  }]}>
                         <Text style={[styles.textBox]}>2</Text>
                     </View>
                     <View style={[styles.box, { flex: 1 }]}>
