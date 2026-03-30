@@ -15,10 +15,12 @@ import ExercicioView06 from './exercícios-view/exercicio6';
 import ExercicioView07 from './exercícios-view/exercicio7';
 import ExercicioView08 from './exercícios-view/exercicio8';
 import ExercicioView09 from './exercícios-view/exercicio9';
+import AvaliacaoPratica13 from './avaliacoes-praticas/avaliacao-pratica-pt1-ex13';
+import AvaliacaoPratica12 from './avaliacoes-praticas/avaliacao-pratica-pt1-ex12';
 
 export default function App() {
   return (
-    <ExercicioView09/>
+    <AvaliacaoPratica13/>
   );
 }
 
