@@ -1,10 +1,7 @@
 import { View, Text } from "react-native"
 
-export default function CartaoPerfil(props){
+export default function CartaoPerfil({ nome, idade }){
     return (
-        <View>
-            <Text> Nome: {props.nome}</Text>
-            <Text> Idade:{props.idade}</Text>
-        </View>
+        <Text> {nome} - {idade} anos</Text>
     )
 }
