@@ -17,10 +17,11 @@ import ExercicioView08 from './exercícios-view/exercicio8';
 import ExercicioView09 from './exercícios-view/exercicio9';
 import AvaliacaoPratica13 from './avaliacoes-praticas/avaliacao-pratica-pt1-ex13';
 import AvaliacaoPratica12 from './avaliacoes-praticas/avaliacao-pratica-pt1-ex12';
+import CartaoPerfil from './basic_components/props-aula4-cartao-perfil';
 
 export default function App() {
   return (
-    <AvaliacaoPratica13/>
+    <CartaoPerfil/>
   );
 }
 
