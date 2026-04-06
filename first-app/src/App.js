@@ -21,13 +21,12 @@ import CartaoPerfil from './basic_components/props-aula4-cartao-perfil';
 import CardProduto from './exercicios-aula4-props/exercicio1-aula4';
 import CartaoUsuario from './exercicios-aula4-props/exercicio2-aula4';
 import CardSaudacao from './exercicios-aula4-props/exercicio3-aula4';
+import PerfilAluno from './exercicios-aula4-props/exercicio4-aula4';
 
 export default function App() {
   return (
     <View>
-    <CardSaudacao nome="Maria"/>
-    <CardSaudacao nome="Nicole"/>
-    <CardSaudacao nome="Bruna"/>
+    <PerfilAluno nome="Carlos" turma="DS-2025" matricula="00123"/>
     </View>
   );
 }
