@@ -21,7 +21,11 @@ import CartaoPerfil from './basic_components/props-aula4-cartao-perfil';
 
 export default function App() {
   return (
-    <CartaoPerfil/>
+    <View>
+    <CartaoPerfil nome="Maria" idade={25}/>
+    <CartaoPerfil nome="Nicole" idade={19}/>
+    <CartaoPerfil nome="Bruna" idade={29}/>
+    </View>
   );
 }
 
