@@ -20,13 +20,14 @@ import AvaliacaoPratica12 from './avaliacoes-praticas/avaliacao-pratica-pt1-ex12
 import CartaoPerfil from './basic_components/props-aula4-cartao-perfil';
 import CardProduto from './exercicios-aula4-props/exercicio1-aula4';
 import CartaoUsuario from './exercicios-aula4-props/exercicio2-aula4';
+import CardSaudacao from './exercicios-aula4-props/exercicio3-aula4';
 
 export default function App() {
   return (
     <View>
-    <CartaoUsuario nome="Maria" email="maria.sobrenome@gmail.com"/>
-    <CartaoUsuario nome="Nicole" email="nic.sobrenome@gmail.com"/>
-    <CartaoUsuario nome="Bruna" email="bru.sobrenome@gmail.com"/>
+    <CardSaudacao nome="Maria"/>
+    <CardSaudacao nome="Nicole"/>
+    <CardSaudacao nome="Bruna"/>
     </View>
   );
 }
