@@ -22,12 +22,12 @@ import CardProduto from './exercicios-aula4-props/exercicio1-aula4';
 import CartaoUsuario from './exercicios-aula4-props/exercicio2-aula4';
 import CardSaudacao from './exercicios-aula4-props/exercicio3-aula4';
 import PerfilAluno from './exercicios-aula4-props/exercicio4-aula4';
+import DesafioBotao from './exercicios-aula4-props/desafio-aula4';
 
 export default function App() {
   return (
-    <View>
-    <PerfilAluno nome="Carlos" turma="DS-2025" matricula="00123"/>
-    </View>
+    <DesafioBotao/>
+    
   );
 }
 
