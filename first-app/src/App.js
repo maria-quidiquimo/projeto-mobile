@@ -19,13 +19,14 @@ import AvaliacaoPratica13 from './avaliacoes-praticas/avaliacao-pratica-pt1-ex13
 import AvaliacaoPratica12 from './avaliacoes-praticas/avaliacao-pratica-pt1-ex12';
 import CartaoPerfil from './basic_components/props-aula4-cartao-perfil';
 import CardProduto from './exercicios-aula4-props/exercicio1-aula4';
+import CartaoUsuario from './exercicios-aula4-props/exercicio2-aula4';
 
 export default function App() {
   return (
     <View>
-    <CardProduto produto="Papel" preco={25.00}/>
-    <CardProduto produto="Caneta" preco={2.50} />
-    <CardProduto produto="Lápis" preco={1.50} />
+    <CartaoUsuario nome="Maria" email="maria.sobrenome@gmail.com"/>
+    <CartaoUsuario nome="Nicole" email="nic.sobrenome@gmail.com"/>
+    <CartaoUsuario nome="Bruna" email="bru.sobrenome@gmail.com"/>
     </View>
   );
 }
