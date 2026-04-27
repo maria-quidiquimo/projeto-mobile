@@ -23,10 +23,11 @@ import CartaoUsuario from './exercicios-aula4-props/exercicio2-aula4';
 import CardSaudacao from './exercicios-aula4-props/exercicio3-aula4';
 import PerfilAluno from './exercicios-aula4-props/exercicio4-aula4';
 import DesafioBotao from './exercicios-aula4-props/desafio-aula4';
+import ContadorExemplo from './hooks/useState_example';
 
 export default function App() {
   return (
-    <DesafioBotao/>
+    <ContadorExemplo/>
     
   );
 }
