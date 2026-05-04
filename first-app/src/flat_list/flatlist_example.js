@@ -1,4 +1,5 @@
 import { FlatList, View, Text, StyleSheet } from "react-native"
+import CardItem from "./card_item";
 
 export default function FlatListExemplo(){
     const alunos = [
@@ -13,15 +14,14 @@ export default function FlatListExemplo(){
     return(
         <View style={styles.container}>
             <Text style={styles.titulo}>FlatList</Text>
-            <View style={styles.exemplo}>
+            <View style={styles.exemploLista}>
                 <Text style={styles.subtitulo}> FlatList Básico</Text>
                 <FlatList 
+                scrollEnabled={true}
                 data={alunos}
                 keyExtractor={(aluno) => aluno.id}
                 renderItem={({item: aluno}) => (
-                    <View>
-                        <Text>{aluno.nome} - {aluno.nota}</Text>
-                    </View>
+                    <CardItem  nome={aluno.nome} nota={aluno.nota}/>
                 )}
                 />
             </View>
@@ -32,9 +32,9 @@ export default function FlatListExemplo(){
 const styles = StyleSheet.create({
 container: {
 flex: 1,
-justifyContent: "center",
 alignItems: "center",
 backgroundColor: "#f5f5f5",
+paddingTop: 60,
 },
 titulo: {
 fontSize: 20,
@@ -47,29 +47,21 @@ fontWeight: "bold",
 color: "#4285f4",
 marginBottom: 8,
 },
-exemplo: {
+
+exemploLista: {
 width: "80%",
+height: 150,
 padding: 16,
 marginBottom: 16,
-backgroundColor: "#fff",
+backgroundColor: "#ffffff",
 borderRadius: 8,
 },
-input: {
-borderWidth: 1,
-borderColor: "#ddd",
-borderRadius: 8,
-padding: 12,
-marginBottom: 8,
-},
-botao: {
-backgroundColor: "#4285f4",
-padding: 12,
-borderRadius: 8,
-alignItems: "center",
-marginTop: 4,
-},
-textoBotao: {
-color: "#fff",
-fontWeight: "bold",
+linha: {
+flexDirection: "row",
+justifyContent: "space-between",
+padding: 10,
+backgroundColor: "#ffffff",
+marginBottom: 4,
+borderRadius: 4,
 },
 });
