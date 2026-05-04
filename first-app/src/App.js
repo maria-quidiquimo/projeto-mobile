@@ -25,10 +25,14 @@ import { StyleSheet, Text, View } from 'react-native';
 // import DesafioBotao from './exercicios-aula4-props/desafio-aula4';
 import ContadorExemplo from './hooks/useState_example';
 import TelaDeLogin from './hooks/useRef_example';
+import TelaMoeda from './hooks/useEffect+example';
+import Recados from './hooks/exercícios/exercicio_aula5';
+import FormularioExemplo from './text_input/formulario';
+import FlatListExemplo from './flat_list/flatlist_example';
 
 export default function App() {
   return (
-    <TelaDeLogin/>
+    <FlatListExemplo/>
     
   );
 }
