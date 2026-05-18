@@ -29,11 +29,22 @@ import TelaMoeda from './hooks/useEffect+example';
 import Recados from './hooks/exercícios/exercicio_aula5';
 import FormularioExemplo from './text_input/formulario';
 import FlatListExemplo from './flat_list/flatlist_example';
+import { NavigationContainer } from '@react-navigation/native';
+import StackNavigator from './navigation/exemplos/stack-navigator';
+import HomeScreen from './navigation/screens/HomeScreen';
+import DetalheScreen from './navigation/screens/DetalheScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    <FlatListExemplo/>
-    
+    <NavigationContainer>
+      <StackNavigator inicialRouteName="Home">
+      <Stack.Screen name="Home" component={HomeScreen}/>
+      <Stack.Screen name="Detalhe" component={DetalheScreen}/>
+      </StackNavigator>
+    </NavigationContainer>
   );
 }
 
