@@ -34,16 +34,15 @@ import StackNavigator from './navigation/exemplos/stack-navigator';
 import HomeScreen from './navigation/screens/HomeScreen';
 import DetalheScreen from './navigation/screens/DetalheScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import BottomTabNavigator from './navigation/exemplos/bottom_tab_navigator';
+import RnNavigationLab from ''
 
-const Stack = createNativeStackNavigator()
+// const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
     <NavigationContainer>
-      <StackNavigator inicialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen}/>
-      <Stack.Screen name="Detalhe" component={DetalheScreen}/>
-      </StackNavigator>
+      <RnNavigationLab/>
     </NavigationContainer>
   );
 }
