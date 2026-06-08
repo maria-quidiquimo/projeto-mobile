@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
-// TODO: apos importar o componente CardMusica, adicione a linha abaixo:
-// import { CardMusica } from '../components';
+import { CardMusica } from '../components';
 
-// Dados de exemplo para voce visualizar o renderItem funcionando
-// Em um app real, esses itens chegariam via Route.params enviados pela DetalheScreen
 const musicasMock = [
   {
     id: "1",
@@ -21,16 +18,15 @@ const musicasMock = [
     nota: "9/10",
   },
 ];
-// passar Route como parâmetro para uso dos parametros de rota
-export default function ListaScreen() {
+
+export default function ListaScreen({ route }) {
   const [itensSalvos, setItensSalvos] = useState(musicasMock);
 
-  // Para receber uma musica salva da DetalheScreen via Route.params:
-  //  useEffect(() => {
-  //   if (route.params?.novaMusica) {
-  //     setItensSalvos((prev) => [...prev, route.params.novaMusica]);
-  //   }
-  // }, [route.params?.novaMusica]);
+  useEffect(() => {
+    if (route.params?.novaMusica) {
+      setItensSalvos((prev) => [...prev, route.params.novaMusica]);
+     }
+    }, [route.params?.novaMusica]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -42,9 +38,7 @@ export default function ListaScreen() {
         data={itensSalvos}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          // TODO: apos criar e importar CardMusica, substitua este bloco por:
-          // <CardMusica titulo={item.titulo} genero={item.genero} plataforma={item.plataforma} nota={item.nota} />
-          <View style={styles.card} />
+          <CardMusica titulo={item.titulo} genero={item.genero} plataforma={item.plataforma} nota={item.nota} />
         )}
         ListEmptyComponent={
           <View style={styles.conteudo}>
@@ -136,3 +130,17 @@ const styles = StyleSheet.create({
     minHeight: 72,
   },
 });
+
+// TODO: apos importar o componente CardMusica, adicione a linha abaixo:
+// import { CardMusica } from '../components';
+// Dados de exemplo para voce visualizar o renderItem funcionando
+// Em um app real, esses itens chegariam via Route.params enviados pela DetalheScreen
+// passar Route como parâmetro para uso dos parametros de rota
+// Para receber uma musica salva da DetalheScreen via Route.params:
+  //  useEffect(() => {
+  //   if (route.params?.novaMusica) {
+  //     setItensSalvos((prev) => [...prev, route.params.novaMusica]);
+  //   }
+  // }, [route.params?.novaMusica]);
+  // TODO: apos criar e importar CardMusica, substitua este bloco por:
+  // <CardMusica titulo={item.titulo} genero={item.genero} plataforma={item.plataforma} nota={item.nota} />
