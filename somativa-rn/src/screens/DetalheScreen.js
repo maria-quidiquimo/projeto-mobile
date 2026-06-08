@@ -17,9 +17,8 @@ const filmeMock = {
     "Um grupo de astronautas viaja atraves de um buraco de minhoca em busca de um novo lar para a humanidade. Christopher Nolan entrega uma obra sobre amor, tempo e sobrevivencia.",
 };
 
-// TODO: adicionar { route, navigation } como parametros
-export default function DetalheScreen() {
-  // TODO: const { titulo, demais parametros} = route?.params ?? filmeMock;
+export default function DetalheScreen({ route, navigation }) {
+  const { titulo, genero, plataforma, nota, sinopse } = route?.params ?? filmeMock;
 
   const [isSalvo, setIsSalvo] = useState(false);
 
@@ -50,14 +49,12 @@ export default function DetalheScreen() {
           <Text style={styles.detalheTexto}>{sinopse}</Text>
         </View>
 
-        {/* TODO: ao adicionar o filme, navegar para a aba "Lista" passando os dados do filme */}
-
         <TouchableOpacity
           style={[styles.botao, isSalvo && styles.botaoAtivo]}
           onPress={() => {
             if (!isSalvo) {
               navigation.navigate("nome da tela", {
-                // novoFilme: {dados do filme},
+              novoFilme: {titulo, genero, plataforma, nota, sinopse},
               });
             }
             setIsSalvo((prev) => !prev);
@@ -180,3 +177,9 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
   },
 });
+
+
+// TODO: adicionar { route, navigation } como parametros
+// TODO: const { titulo, demais parametros} = route?.params ?? filmeMock;
+// novoFilme: {dados do filme},
+{/* TODO: ao adicionar o filme, navegar para a aba "Lista" passando os dados do filme */}

@@ -66,8 +66,7 @@ const filmes = [
   },
 ];
 
-// TODO: adicionar { navigation } como parametro
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   const [busca, setBusca] = useState('');
   const [filmesFiltrados, setFilmesFiltrados] = useState(filmes);
 
@@ -81,9 +80,8 @@ export default function HomeScreen() {
   function renderItem({ item }) {
     return (
       <TouchableOpacity
-        style={styles.card}
-        // TODO: onPress={() => navigation.navigate('Detalhe', { ...item })}
-      >
+        style={styles.card} 
+        onPress={() => navigation.navigate('Detalhe', {titulo: item.titulo, genero: item.genero, plataforma: item.plataforma, nota: item.nota, sinopse: item.sinopse})}>
         <View style={styles.cardIcone}>
           <Text style={styles.cardIconeTexto}>{item.titulo[0]}</Text>
         </View>
@@ -221,3 +219,6 @@ const styles = StyleSheet.create({
     color: '#FF6B35',
   },
 });
+
+// TODO: adicionar { navigation } como parametro
+// TODO: onPress={() => navigation.navigate('Detalhe', { ...item })}
