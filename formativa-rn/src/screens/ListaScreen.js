@@ -4,7 +4,7 @@ import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
 // import { CardMusica } from '../components';
 
 // Dados de exemplo para voce visualizar o renderItem funcionando
-// Em um app real, esses itens chegariam via route.params enviados pela DetalheScreen
+// Em um app real, esses itens chegariam via Route.params enviados pela DetalheScreen
 const musicasMock = [
   {
     id: "1",
@@ -25,7 +25,7 @@ const musicasMock = [
 export default function ListaScreen() {
   const [itensSalvos, setItensSalvos] = useState(musicasMock);
 
-  // Para receber uma musica salva da DetalheScreen via route.params:
+  // Para receber uma musica salva da DetalheScreen via Route.params:
   //  useEffect(() => {
   //   if (route.params?.novaMusica) {
   //     setItensSalvos((prev) => [...prev, route.params.novaMusica]);

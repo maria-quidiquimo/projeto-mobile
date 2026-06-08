@@ -5,8 +5,15 @@ import AppNavigator from "./src/navigation";
 export default function App() {
   return (
     <SafeAreaProvider>
-      {/* TODO: envolver com NavigationContainer */}
-      {/* TODO: chamar o componente AppNavigator */}
+      <NavigationContainer>
+        <AppNavigator>
+
+        </AppNavigator>
+      </NavigationContainer>
     </SafeAreaProvider>
   );
 }
+
+
+{/* TODO: envolver com NavigationContainer */}
+{/* TODO: chamar o componente AppNavigator */}
