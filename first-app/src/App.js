@@ -35,14 +35,13 @@ import HomeScreen from './navigation/screens/HomeScreen';
 import DetalheScreen from './navigation/screens/DetalheScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import BottomTabNavigator from './navigation/exemplos/bottom_tab_navigator';
-import RnNavigationLab from './'
 
 // const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
     <NavigationContainer>
-      <RnNavigationLab/>
+      <BottomabNavigator/>
     </NavigationContainer>
   );
 }
