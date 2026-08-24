@@ -72,6 +72,16 @@ export default function ListaTarefasScreen() {
       tarefasAtuais.filter((tarefa) => tarefa.id !== id))
   }
 
+  async function limparTarefas(){
+    try {
+      setTarefas([]); // Limpa a tela imediatamente
+      await AsyncStorage.removeItem(CHAVE_STORAGE); // Apaga do banco local
+    } catch (erro) {
+      console.error("Erro ao limpar o storage:", erro);
+    }
+  }
+
+
   return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -113,6 +123,16 @@ export default function ListaTarefasScreen() {
         }
         contentContainerStyle={styles.listaConteudo}
       />
+
+      <View style={styles.containerBotaoLimpar}>
+        <TouchableOpacity
+          style={styles.botaoLimparTudo}
+          onPress={limparTarefas} // Mudou para a função correta!
+        >
+          <Text style={styles.textoBotaoLimpar}>Apagar tudo</Text>
+        </TouchableOpacity>
+      </View>
+
     </KeyboardAvoidingView>
   );
 }
@@ -161,5 +181,21 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#888",
     marginTop: 24,
+  },
+  containerBotaoLimpar: {
+    marginTop: 16,
+    marginBottom: 16,
+  },
+  botaoLimparTudo: {
+    backgroundColor: "#ff4d4d", // Vermelho para indicar exclusão
+    borderRadius: 8,
+    paddingVertical: 12,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  textoBotaoLimpar: {
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: 16,
   },
 });
