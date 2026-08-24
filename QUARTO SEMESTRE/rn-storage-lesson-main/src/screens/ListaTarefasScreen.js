@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FlatList,
   KeyboardAvoidingView,
@@ -10,11 +10,40 @@ import {
   View,
 } from "react-native";
 import TarefaItem from "../components/TarefaItem";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+const CHAVE_STORAGE = '@rn-storage-lesson:tarefas';
 
 export default function ListaTarefasScreen() {
 
   const [tarefas, setTarefas] = useState([]);
   const [textoInput, setTextoInput] = useState("");
+  const [carregando, setCarregando] = useState(true);
+
+  useEffect(() => {
+    async function carregarTarefas() {
+      try {
+        const tarefasSalvas = await AsyncStorage.getItem(CHAVE_STORAGE)
+        if(tarefasSalvas !== null){
+          setTarefas(JSON.parse(tarefasSalvas))
+        }
+      } catch (erro) {
+        console.error('Erro ao carregar tarefas do storage:', erro);
+      } finally{
+        setCarregando(false)
+      }
+    }
+    carregarTarefas();
+  }, []);
+
+  useEffect(() => {
+    if(carregando) return;
+
+    AsyncStorage.setItem(CHAVE_STORAGE, JSON.stringify(tarefas)).catch((erro) => {
+      console.error("Erro ao salvar a tarefa no storage:", erro)
+    }
+  )
+  }, [tarefas, carregando])
 
   function adicionarTarefa(){
     const texto = textoInput.trim();
