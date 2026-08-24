@@ -12,6 +12,26 @@ import {
 import TarefaItem from "../components/TarefaItem";
 
 export default function ListaTarefasScreen() {
+
+  const [tarefas, setTarefas] = useState([]);
+  const [textoInput, setTextoInput] = useState("");
+
+  function adicionarTarefa(){
+    const texto = textoInput.trim();
+    if(texto === '') return;
+
+    const novaTarefa = {
+      id: Date.now().toString(),
+      texto,
+      concluida: false,
+    }
+
+    setTarefas((tarefasAtuais) => [...tarefasAtuais, novaTarefa]) 
+    // os '...' copia a array vai colocar uma nova coisa na lista no final
+
+    setTextoInput('');
+  }
+
   return (
     <KeyboardAvoidingView
       style={styles.container}
