@@ -32,6 +32,14 @@ export default function ListaTarefasScreen() {
     setTextoInput('');
   }
 
+  function alternarConcluida(id){
+
+    setTarefas((tarefasAtuais) => 
+      tarefasAtuais.map((tarefa) => tarefa.id === id ? {...tarefa, concluida: !tarefa.concluida} : tarefa))
+  }
+
+  
+
   return (
     <KeyboardAvoidingView
       style={styles.container}
