@@ -38,7 +38,10 @@ export default function ListaTarefasScreen() {
       tarefasAtuais.map((tarefa) => tarefa.id === id ? {...tarefa, concluida: !tarefa.concluida} : tarefa))
   }
 
-  
+  function excluirTarefa(id){
+    setTarefas((tarefasAtuais) => 
+      tarefasAtuais.filter((tarefa) => tarefa.id !== id))
+  }
 
   return (
     <KeyboardAvoidingView
@@ -53,12 +56,12 @@ export default function ListaTarefasScreen() {
           placeholder="Digite uma nova tarefa..."
           value={textoInput}
           onChangeText={setTextoInput}
-          onSubmitEditing={}
+          onSubmitEditing={adicionarTarefa}
           returnKeyType="done"
         />
         <TouchableOpacity
           style={styles.botaoAdicionar}
-          onPress={}
+          onPress={adicionarTarefa}
         >
           <Text style={styles.textoBotaoAdicionar}>Adicionar</Text>
         </TouchableOpacity>
@@ -70,8 +73,8 @@ export default function ListaTarefasScreen() {
         renderItem={({ item }) => (
           <TarefaItem
             tarefa={item}
-            aoAlternarConcluida={}
-            aoExcluir={}
+            aoAlternarConcluida={alternarConcluida}
+            aoExcluir={excluirTarefa}
           />
         )}
         ListEmptyComponent={
